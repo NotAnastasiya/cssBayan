@@ -4,54 +4,82 @@
         margin: 0;
     }
 
+    body {
+        width: 80%;
+        margin: auto;
+    }
+
     .header {
         display: flex;
         justify-content: space-between;
         margin: 5%;
         font-size: 100%;
         font-weight: 600;
+        color: #663399;
     }
     
-    form {
+    .form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
+   
+    .form input[type=radio] {
+        display: none;
+    }
 
-    .lable {
+    .label {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: space-between;
         text-align: center;
-        border-bottom: 0.2em solid violet;
+        width: 70%;
+        padding-left: 1%;
+        border: 0.1em solid #FFA500;
         font-size: 120%;
         font-weight: 600;
+        user-select: none;
     }
 
-    .lable img {
+    .label-text {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cross {
+        background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+        background-image: url("assets/cross.png");
+        width: 8%;
+        transform: rotate(45deg);
+        transition: transform 250ms;
+    }
+
+    .label img {
         margin: 3%;
     }
 
-    /*img {
-        display: block;
-    }*/
-
     .mem-wrapper {
+        align-self: center;
         visibility: hidden;
         height: 0;
         opacity: 0;
-        transition: opacity 1s;
+        transition: opacity 500ms;
     }
 
-    .lable input[type="radio"]:checked ~ .mem-wrapper{
+    label input[type="radio"]:checked ~ .mem-wrapper{
         visibility: visible; 
         height: fit-content;
         opacity: 1;
-        
     }
 
+    label input[type="radio"]:checked ~ .label-text .cross{
+        transform: rotate(0);
+    }
 }
 
 
@@ -61,8 +89,8 @@
         font-size: 200%;
         font-weight: 600;
     }
-    .lable {
-        border-bottom: 0.1em solid violet;
+    .label {
+        border-bottom: 0.1em solid #FFA500;
         font-size: 220%;
         font-weight: 600;
     }
@@ -75,17 +103,23 @@
         font-weight: 600;
     }
 
-    .lable {
-        border-bottom: 0.1em solid violet;
+    .label {
+        border-bottom: 0.1em solid #FFA500;
         font-size: 360%;
         font-weight: 600;
     }
 
-    .lable:hover, .lable input:hover{
+    .label:hover, .label input:hover{
         cursor: pointer;
     }
     
-    .lable:hover .mem-wrapper{
-        visibility: visible;  
+    .label:hover .mem-wrapper{
+        visibility: visible; 
+        height: fit-content;
+        opacity: 1;
+    }
+
+    .label:hover .label-text .cross{
+        transform: rotate(0);
     }
 }
