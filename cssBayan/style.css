@@ -1,5 +1,4 @@
-@media (min-width: 320px) {
-    *{
+ *{
         box-sizing: border-box;
         margin: 0;
     }
@@ -68,16 +67,12 @@
 
     .mem-wrapper {
         align-self: center;
+        text-align: center;
         margin: auto;
         visibility: hidden;
         height: 0;
         opacity: 0;
         transition: opacity 500ms;
-    }
-
-    .mem-wrapper img {
-        display: block;
-        margin: 1% auto;
     }
 
     label input[type="radio"]:checked ~ .mem-wrapper{
@@ -89,7 +84,6 @@
     label input[type="radio"]:checked ~ .label-text .cross{
         transform: rotate(0);
     }
-}
 
 
 @media (min-width: 820px) {
