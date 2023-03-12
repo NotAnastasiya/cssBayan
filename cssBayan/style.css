@@ -34,19 +34,24 @@
         margin: 3%;
     }
 
-    /*.mem-wrapper {
-        transition: all 1s;
+    /*img {
+        display: block;
     }*/
-
-    .lable input[type="radio"]:checked ~ .mem-wrapper{
-        visibility: visible; 
-        height: fit-content;
-    }
 
     .mem-wrapper {
         visibility: hidden;
         height: 0;
+        opacity: 0;
+        transition: opacity 1s;
     }
+
+    .lable input[type="radio"]:checked ~ .mem-wrapper{
+        visibility: visible; 
+        height: fit-content;
+        opacity: 1;
+        
+    }
+
 }
 
 
