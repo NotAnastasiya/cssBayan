@@ -1,84 +1,92 @@
  *{
-        box-sizing: border-box;
-        margin: 0;
-    }
+    box-sizing: border-box;
+    margin: 0;
+}
 
-    body {
-        background-color: rgba(236, 216, 143, 0.3);
-    }
+body {
+    background-color: rgba(236, 216, 143, 0.3);
+}
 
-    .background {
-        width: 90%;
-        margin: auto;
-    }
+.background {
+    width: 90%;
+    margin: auto;
+}
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        font-size: 100%;
-        font-weight: 600;
-        color: #3c1662;
-        width: 100%;
-        margin: 5% 0;
-    }
-    
-    .form {
-        display: flex;
-        flex-direction: column;
-    }
+.header {
+    font-size: 100%;
+    font-weight: 600;
+    color: #3c1662;
+    width: 100%;
+    margin: 5% 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
    
-    .form input[type=radio] {
-        display: none;
-    }
+.form input[type=radio] {
+    visibility: hidden;
+    height: 0;
+}
 
-    .label {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 1%;
-        border-top: 0.1rem solid orange;
-        font-size: 120%;
-        color: #3c1662;
-        font-weight: 600;
-        user-select: none;
-    }
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1%;
+    border-top: 0.1rem solid orange;
+    font-size: 120%;
+    color: #3c1662;
+    font-weight: 600;
+    user-select: none;
+}
 
-    .label:active {
-        opacity: 0.6;
-    }
+.label:active {
+    opacity: 0.6;
+}
 
-    .label-text {
-        display: flex;
-        align-self: start;
-        justify-content: space-between;
-        width: 100%;
-        margin: 2% 0;
-    }
+.label-text {
+    display: flex;
+    align-self: start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2% 0;
+}
 
-    .cross {
-        background-repeat: no-repeat;
-	    background-size: cover;
-	    background-position: center;
-        background-image: url("assets/cross.png");
-        width: 8%;
-        transform: rotate(45deg);
-        transition: transform 250ms;
-    }
+.cross {
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    background-image: url("assets/cross.png");
+    width: 8%;
+    transform: rotate(45deg);
+    transition: transform 250ms;
+}
 
-    .mem-wrapper {
-        align-self: center;
-        text-align: center;
-        margin: auto;
-        visibility: hidden;
-        height: 0;
-        opacity: 0;
-        transition: opacity 500ms;
-    }
+.mem-wrapper {
+    text-align: center;
+    margin: auto;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.mem-wrapper img {
+    height: 0;
+    transition: opacity 500ms;
+}
+
 
     label input[type="radio"]:checked ~ .mem-wrapper{
         visibility: visible; 
         height: fit-content;
         opacity: 1;
+    }
+
+    label input[type="radio"]:checked ~ .mem-wrapper img{
+        height: auto;
     }
 
     label input[type="radio"]:checked ~ .label-text .cross{
@@ -96,6 +104,7 @@
         font-size: 200%;
         font-weight: 600;
     }
+    
     .label {
         font-size: 220%;
         font-weight: 600;
