@@ -44,7 +44,6 @@ body {
 
 .label:active {
     opacity: 0.6;
-    cursor: grab;
 }
 
 .label-text {
@@ -169,4 +168,8 @@ body {
     }
 
     .mem-wrapper {width: 100%;}
+
+    .label:active {
+        cursor: grab;
+    }
 }
