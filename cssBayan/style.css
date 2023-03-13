@@ -1,0 +1,184 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: rgba(236, 216, 143, 0.3);
+}
+
+.background {
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+    font-size: 100%;
+    font-weight: 600;
+    color: #3c1662;
+    width: 100%;
+    margin: 5% 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+   
+.form input[type=radio] {
+    visibility: hidden;
+    height: 0;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1%;
+    border-top: 0.1rem solid orange;
+    font-size: 120%;
+    color: #3c1662;
+    font-weight: 600;
+    user-select: none;
+}
+
+.label:active {
+    opacity: 0.6;
+}
+
+.label-text {
+    display: flex;
+    align-self: start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2% 0;
+}
+
+.cross {
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+    background-image: url("assets/cross.png");
+    width: 8%;
+    transform: rotate(45deg);
+    transition: transform 4s;
+}
+
+.mem-wrapper {
+    text-align: center;
+    margin: auto;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: opacity 4s;
+}
+
+.mem-wrapper img {
+    height: 0;
+    transition: opacity 4s;
+}
+
+
+    label input[type="radio"]:checked ~ .mem-wrapper{
+        visibility: visible; 
+        height: fit-content;
+        opacity: 1;
+    }
+
+    label input[type="radio"]:checked ~ .mem-wrapper img{
+        height: auto;
+    }
+
+    label input[type="radio"]:checked ~ .label-text .cross{
+        transform: rotate(0);
+    }
+
+
+@media (min-width: 820px) {
+
+    .background {
+        width: 70%;
+    }
+
+    .header {
+        font-size: 200%;
+        font-weight: 600;
+    }
+
+    .label {
+        font-size: 220%;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1220px) {
+
+    .background {
+        width: 70%;
+    }
+
+    .background:hover {
+        cursor: pointer;
+    }
+
+    .label p {
+        color: blue;
+        transition: color 250ms;
+    }
+
+    .label input[type="radio"]:checked + .label-text p{
+        color: #3c1662;
+    }
+
+    .background:hover p {
+        color: #3c1662;
+    }
+    
+    .cross {
+        opacity: 0;
+        transition: opacity 4s;
+    }
+
+    .background:hover .cross {
+        opacity: 1;
+    }
+
+    .header {
+        font-size: 300%;
+        font-weight: 600;
+    }
+
+    .label {
+        font-size: 350%;
+        font-weight: 600;
+    }
+
+    .mem-wrapper img {
+        width: 70%;
+    }
+
+    .label:hover, .label input:hover{
+        cursor: pointer;
+    }
+    
+    .label:hover .mem-wrapper{
+        visibility: visible; 
+        height: fit-content;
+        opacity: 1;
+    }
+
+    .label:hover .mem-wrapper img{
+        height: auto;
+    }
+
+    .label:hover .label-text .cross{
+        transform: rotate(0);
+        transition: transform 4s;
+    }
+
+    .mem-wrapper {width: 100%;}
+
+    .label:active {
+        cursor: grab;
+    }
+}
