@@ -163,6 +163,10 @@ body {
         opacity: 1;
     }
 
+    .label:hover .mem-wrapper img{
+        height: auto;
+    }
+
     .label:hover .label-text .cross{
         transform: rotate(0);
     }
