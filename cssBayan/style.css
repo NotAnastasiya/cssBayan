@@ -111,10 +111,10 @@ body {
     }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1220px) {
 
     .background {
-        width: 60%;
+        width: 70%;
     }
 
     .background:hover {
@@ -144,13 +144,17 @@ body {
     }
 
     .header {
-        font-size: 500%;
+        font-size: 300%;
         font-weight: 600;
     }
 
     .label {
-        font-size: 360%;
+        font-size: 350%;
         font-weight: 600;
+    }
+
+    .mem-wrapper img {
+        width: 70%;
     }
 
     .label:hover, .label input:hover{
