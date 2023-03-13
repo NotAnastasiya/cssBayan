@@ -61,7 +61,7 @@ body {
     background-image: url("assets/cross.png");
     width: 8%;
     transform: rotate(45deg);
-    transition: transform 250ms;
+    transition: transform 4s;
 }
 
 .mem-wrapper {
@@ -70,12 +70,12 @@ body {
     visibility: hidden;
     height: 0;
     opacity: 0;
-    transition: opacity 500ms;
+    transition: opacity 4s;
 }
 
 .mem-wrapper img {
     height: 0;
-    transition: opacity 500ms;
+    transition: opacity 4s;
 }
 
 
@@ -136,7 +136,7 @@ body {
     
     .cross {
         opacity: 0;
-        transition: opacity 250ms;
+        transition: opacity 4s;
     }
 
     .background:hover .cross {
